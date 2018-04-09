@@ -1,1 +1,1 @@
-# cube-solver
+# CubeSolver
