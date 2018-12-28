@@ -10,4 +10,3 @@ java -cp classes cubevisual.CubeApp
 ```
 ## License
 Licensed under the [MIT License](LICENSE).
->>>>>>> dc7a289fd3299943d98cb5882dd18edd5c197c41
