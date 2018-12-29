@@ -9,7 +9,7 @@ run:
 ```
 java -cp classes cubevisual.CubeApp
 ```
-build jar:
+build JAR:
 ```
 jar cfm CubeSolverExecutable\CubeSolver.jar MANIFEST.MF -C classes cubesolver -C classes cubevisual
 ```
