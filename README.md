@@ -13,5 +13,6 @@ build JAR:
 ```
 jar cfm CubeSolverExecutable\CubeSolver.jar MANIFEST.MF -C classes cubesolver -C classes cubevisual
 ```
+JAR Note: if any files are changed in ```src\resources```, they must also be changed in ```CubeSolverExecutable\src\resources```.
 ## License
 Licensed under the [MIT License](LICENSE).
