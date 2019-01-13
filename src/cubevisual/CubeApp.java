@@ -45,6 +45,7 @@ import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.MeshView;
 import javafx.scene.text.Font;
+import javafx.scene.text.Text;
 import javafx.scene.text.TextFlow;
 import javafx.scene.transform.Rotate;
 import javafx.scene.transform.Translate;
@@ -64,7 +65,7 @@ public class CubeApp extends Application {
     private final VBox vboxT = new VBox();
     private final TextArea tp = new TextArea(); //terminal prompt, response, and output
     private final TextField tr = new TextField();
-    private final TextFlow to = new TextFlow();//new TextArea();
+    private final TextFlow to = new TextFlow();
     private final Group root = new Group();
     private final PerspectiveCamera camera = new PerspectiveCamera();
     private final double theta = 15;
@@ -91,7 +92,7 @@ public class CubeApp extends Application {
     private static String[] settings = loadSettings();
     private boolean settingsOpen = false;
     private Stage settingsStage;
-    private boolean colorPickerOpen = false; //TODO: can remove static!!
+    private boolean colorPickerOpen = false;
     private Stage colorPickerStage;
     private double stageWidth = 0;
     private ScrollPane sp = new ScrollPane(to);
@@ -99,7 +100,11 @@ public class CubeApp extends Application {
     @Override
     public void start(Stage stage) {
         Scene scene = new Scene(grid);
-        //scene.getStylesheets().add(this.getClass().getResource("\\CubeStyles.css").toExternalForm());
+        //scene.getStylesheets().add((new File("src/resources/CubeStyles.css")).getAbsolutePath());
+        //scene.getStylesheets().add(getClass().getClassLoader().getResource("/CubeStyles.css").toExternalForm());
+        //scene.getStylesheets().add(this.getClass().getResource("CubeStyles.css").toExternalForm());
+        //scene.getStylesheets().add("file:///" + (new File("CubeStyles.css")).getAbsolutePath().replace("\\", "/"));
+        scene.getStylesheets().add((new File("src/resources/CubeStyles.css")).toURI().toString());
         width = grid.getWidth();
         height = grid.getHeight();
         subW = width * lPer;
@@ -319,12 +324,12 @@ public class CubeApp extends Application {
         Font font = Font.font("monospace", getFontSize());
         tp.setFont(font);
         tr.setFont(font);
-        /*for (Node text : to.getChildren()) {
+        for (Node text : to.getChildren()) {
             if (text.getStyleClass().size() == 0)
                 text.getStyleClass().add("highlight-text");
                 text.applyCss();
                 ((Text) text).setFont(font);
-        }*/
+        }
         sp.setVvalue(1);
         //to.setFont(font);
     }

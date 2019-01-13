@@ -1,0 +1,4 @@
+.highlight-text{
+-fx-fill:white;
+-fx-effect:dropshadow(three-pass-box,black,10,1,0,0);
+}
