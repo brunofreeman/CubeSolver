@@ -14,7 +14,7 @@ build JAR:
 ```
 jar cfm CubeSolverExecutable\CubeSolver.jar MANIFEST.MF -C classes cubesolver -C classes cubevisual
 ```
-### MacOS
+### macOS
 compile:
 ```
 javac -d classes src/cubesolver/cube/piece/*.java src/cubesolver/cube/*.java src/cubesolver/*.java src/cubevisual/*.java
