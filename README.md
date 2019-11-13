@@ -1,6 +1,6 @@
 # CubeSolver
 To run the CubeSolver JAR executable, ensure Java is installed, download this repository, and open ```CubeSolverExecutable\CubeSolver.jar```. The only files the JAR needs are those in the ```CubeSolverExecutable``` folder.
-## Useful commands (execute from from root directory):
+## Useful commands (execute from root directory):
 ### Windows
 compile:
 ```
